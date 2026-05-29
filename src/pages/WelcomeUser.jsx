@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react"; // ✅ Added useEffect
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import AuthLayout from "../components/layout/AuthLayout";
@@ -11,6 +11,17 @@ const WelcomeUser = () => {
   // Safely extract the profile name string captured during the registration step loop
   const userDetails = useSelector((state) => state.registration?.userDetails);
   const userName = userDetails?.fname || "User"; 
+
+  // ⚡ DYNAMIC BODY CLASS INJECTION
+  useEffect(() => {
+    // ➕ Append the specific class on page mount
+    document.body.classList.add("welcome-page-active");
+
+    // ➖ Cleanup removes the class on unmount when user navigates away
+    return () => {
+      document.body.classList.remove("welcome-page-active");
+    };
+  }, []);
 
   const handleGetStarted = () => {
     // navigate("/dashboard");
