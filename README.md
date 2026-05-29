@@ -3,7 +3,7 @@
 This project is a multi-step user registration workflow engineered using **React.js** and **Redux** based on the provided technical guidelines and Figma blueprints for Woliba. It handles complex form validations, synchronized multi-step state machines, automated cursor management, and resilient frontend data-layer handling with smart architectural fallbacks to completely bypass cross-origin resource sharing (CORS) network walls.
 
 ### 🔗 Production Artifact Links
-- **Live Hosted Application (Netlify):** https://user-registration-flow.netlify.app/
+- **Live Hosted Application (Netlify):** https://user-registration-flow.onrender.com/
 - **Public GitHub Repository:** https://github.com/kolhedhiraj/React_assessment
 
 ---
