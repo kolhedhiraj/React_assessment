@@ -38,16 +38,40 @@ The system transitions the user dynamically through a secure, structured 8-stage
 
 ```text
 src/
-├── api/          # Axios runtime configurations and interceptor setups
-├── assets/       # Vector shapes, functional branding typography, logos
-├── components/   
-│   ├── common/   # Reusable elements (Custom Input wrappers, Steppers, Loaders)
-│   └── layout/   # AuthLayout high-order presentation framing wrappers
-├── hooks/        # Abstracted logic trees (useCountdown timers)
-├── pages/        # Views capturing workflow Steps 1-8
-│   └── styles/   # Document-scoped styling parameters
-├── redux/        # Unified global store configuring registration slices
-├── routes/       # Route guards, single-point definitions, deep tracking redirects
-├── services/     # Pure API integration endpoints
-├── styles/       # System-wide variables, layouts, and overrides
-└── utils/        # Validation patterns, helper tools, structural constants
+├── api/                  # Axios core layer instances & runtime interceptor setups
+│   └── axios.js          
+├── app/                  # Main centralized Redux configuration engine
+│   └── store.js          
+├── assets/               # Layout vectors, corporate typography, & iconography
+│   ├── icons/            # Activity, navigation arrows, and visibility toggle vectors
+│   ├── images/           # Layout assets, page backgrounds, and dynamic screen loaders
+│   └── logos/            # Corporate branding imagery (Woliba Logo)
+├── components/           
+│   ├── common/           # Atomic reusable UI components (Inputs, Custom Calendars, Buttons)
+│   │   └── style/        # Individual stylistic overrides (loader styling hooks)
+│   └── layout/           # High-order framing wrappers (AuthLayout)
+├── hooks/                # Abstracted logic patterns (useCountdown timer handlers)
+├── pages/                # Distinct, decoupled functional view layers (Steps 1 - 8)
+│   ├── styles/           # View-specific SCSS modular stylesheets
+│   ├── CompanyVerification.jsx
+│   ├── UserDetails.jsx
+│   ├── OTPVerification.jsx
+│   ├── CompleteProfile.jsx
+│   ├── Interests.jsx
+│   ├── WellbeingPillars.jsx
+│   ├── GettingReady.jsx
+│   └── WelcomeUser.jsx
+├── redux/                # Individual state slice sheets for multi-step preservation
+│   ├── slices/           # Auth, registration context data, and wellness tracking indexes
+│   └── thunks/           # Asynchronous interaction actions (registrationThunk.js)
+├── routes/               # Declarative app path arrays and protected access guards
+│   ├── AppRoutes.jsx     
+│   └── ProtectedRoute.jsx
+├── services/             # Pure API service layer abstractions
+│   └── registrationService.js
+├── styles/               # Global styling layouts and unified variables
+│   └── global.css
+└── utils/                # Validation logic blocks, constant data maps, and state local storage
+    ├── constants.js
+    ├── validation.js
+    └── helpers.js
