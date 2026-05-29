@@ -11,11 +11,11 @@ const AuthLayout = ({ children }) => {
         <LanguageSwitch />
       </div>
 
-      <img
+      {/* <img
         src="/bg-lines.png"
         alt=""
         className="background-lines"
-      />
+      /> */}
 
       <div className="form-center">
         {children}
