@@ -13,7 +13,7 @@ const WelcomeUser = () => {
   const userName = userDetails?.fname || "User"; 
 
   const handleGetStarted = () => {
-    navigate("/dashboard");
+    // navigate("/dashboard");
   };
 
   return (
