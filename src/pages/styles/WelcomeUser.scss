@@ -1,0 +1,118 @@
+@use "sass:color";
+body{
+    background:none; // Light gray background for a calm, neutral tone
+}
+.welcome-screen-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  overflow: hidden;
+
+  // Blur decorative orbs mimicking the image background
+  .glow-orb {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: 0;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  .orb-green { top: 10%; left: 15%; background: #A2E8DD; }
+  .orb-yellow { top: 5%; right: 20%; background: #FFF3C4; }
+  .orb-purple { bottom: 15%; right: 10%; background: #E8A2D7; }
+
+  .welcome-card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 580px;
+    text-align: center;
+  }
+
+  .meditation-illustration {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .lotus-background {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 2px dashed rgba(#DA6C74, 0.3);
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sparkle {
+      position: absolute;
+      color: #92A4DA;
+      font-size: 1.25rem;
+    }
+    .sp-1 { top: 25%; left: 10%; animation: pulse 1.5s infinite alternate; }
+    .sp-2 { top: 20%; right: 10%; animation: pulse 1.5s infinite alternate 0.75s; }
+  }
+
+  .welcome-title {
+    font-size: 2.25rem;
+    color: #0A2540;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+  }
+
+  .welcome-description {
+    font-size: 1rem;
+    color: #4A5568;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+
+  .get-started-btn {
+    background-color: #DA6C74; // Flat crimson red/coral matching button asset
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.85rem 3.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(#DA6C74, 0.25);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: color.adjust(#DA6C74, $lightness: -5%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(#DA6C74, 0.35);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.2); opacity: 1; }
+}

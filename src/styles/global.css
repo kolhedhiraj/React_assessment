@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+button,
+input {
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: #b8b8b8;
+}
+.application-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.language-switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-box{
+    margin-left: 10px;
+}
