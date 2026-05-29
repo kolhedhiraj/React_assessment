@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import CompanyVerification from "../pages/CompanyVerification";
 import UserDetails from "../pages/UserDetails";
-import OtpVerification from "../pages/OtpVerification";
+import OtpVerification from "../pages/OTPVerification";
 import CompleteProfile from "../pages/CompleteProfile.jsx";
 import Interests from "../pages/Interests";
 import WellbeingPillars from "../pages/WellbeingPillars";
