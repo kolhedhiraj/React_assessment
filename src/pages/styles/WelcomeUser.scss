@@ -1,6 +1,6 @@
 @use "sass:color";
-body{
-    background:#ffffff ;// Light gray background for a calm, neutral tone
+body.welcome-page-active {
+    background: #ffffff !important; 
 }
 .welcome-screen-wrapper {
   position: relative;
